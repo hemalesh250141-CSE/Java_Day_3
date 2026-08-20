@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Attendance {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter total number of classes: ");
+        int totalClasses = sc.nextInt();
+
+        System.out.print("Enter number of classes attended: ");
+        int attendedClasses = sc.nextInt();
+
+        double percentage = ((double) attendedClasses / totalClasses) * 100;
+
+        System.out.println("Attendance Percentage: " + percentage + "%");
+
+        if (percentage >= 75) {
+            System.out.println("Status: Eligible");
+        } else {
+            System.out.println("Status: Not Eligible");
+        }
+
+        sc.close();
+    }
+}
